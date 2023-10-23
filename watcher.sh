@@ -14,6 +14,6 @@ while read path action file; do
 
       sleep delay
 
-        $command_to_run
+      $command_to_run
     fi
 done
