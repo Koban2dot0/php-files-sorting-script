@@ -10,7 +10,9 @@ $pathToBaseFolder = '/home/koban/Downloads';
 function startSorting($pathToBaseFolder): void
 {
     if (!is_dir($pathToBaseFolder)) {
-        throw new Exception("\033[31mGiven path: $pathToBaseFolder is not a folder!\033[0m\n");
+        $colorRedOpen = '\033[31m';
+        $colorRedClose = '\033[0m';
+        throw new Exception($colorRedOpen . "Given path: $pathToBaseFolder is not a folder!" . $colorRedClose . "\n");
     }
 
     $files = getFilesFromFolder($pathToBaseFolder);
